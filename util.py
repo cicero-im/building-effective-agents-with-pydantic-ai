@@ -1,8 +1,8 @@
 import os
-import random
 from pprint import pformat, pprint
 from dotenv import load_dotenv
 import nest_asyncio
+import secrets
 
 
 def initialize():
@@ -19,7 +19,7 @@ def initialize():
     _ai_model = (
         os.environ['AI_MODEL']
         if os.environ.get('AI_MODEL')
-        else random.choice(_ai_models)
+        else secrets.choice(_ai_models)
     )
     print()
     print(f"Using AI model: {_ai_model}")
