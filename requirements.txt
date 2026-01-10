@@ -4,3 +4,4 @@ nest_asyncio
 asyncpg
 opentelemetry-instrumentation-asyncpg
 logfire[asyncpg]
+urllib3>=2.6.3 # not directly required, pinned by Snyk to avoid a vulnerability
